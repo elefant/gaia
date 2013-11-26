@@ -29,7 +29,8 @@
     "power":{},
     "idle":{},
     "telephony":{},
-    "audio-channel-notification":{}
+    "audio-channel-notification":{},
+    "tcp-socket":{}
   },
   "activities": {
     "configure": {
@@ -40,7 +41,8 @@
     }
   },
   "messages": ["bluetooth-pairing-request",
-               "bluetooth-cancel"],
+               "bluetooth-cancel",
+               "wifip2p-pairing-request"],
   "locales": {
     "ar": {
       "name": "الضبط",

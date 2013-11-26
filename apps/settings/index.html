@@ -74,8 +74,10 @@
     <link rel="import" href="/elements/wifi_auth.html">
     <link rel="import" href="/elements/wifi_join_hidden.html">
     <link rel="import" href="/elements/wifi_wps.html">
+    <link rel="import" href="/elements/wifip2p_wps.html">
     <link rel="import" href="/elements/wifi_manage_networks.html">
     <link rel="import" href="/elements/wifi.html">
+    <link rel="import" href="/elements/wifip2p.html">
     <link rel="import" href="/elements/call_cf_not_reachable_settings.html">
     <link rel="import" href="/elements/call_cf_no_reply_settings.html">
     <link rel="import" href="/elements/call_cf_mobile_busy_settings.html">
@@ -167,10 +169,14 @@
     <section is="wifi-joinHidden" role="region" id="wifi-joinHidden"></section>
     <!-- Connectivity :: Wi-Fi :: WPS -->
     <section is="wifi-wps" role="region" id="wifi-wps"></section>
+    <!-- Connectivity :: Wi-Fi :: P2P WPS -->
+    <section is="wifip2p-wps" role="region" id="wifip2p-wps"></section>
     <!-- Connectivity :: Wi-Fi :: Saved Networks -->
     <section is="wifi-manageNetworks" role="region" id="wifi-manageNetworks"></section>
     <!-- Connectivity :: Wi-Fi -->
     <section is="wifi" role="region" id="wifi" data-require-sub-panels="true"></section>
+    <!-- Connectivity :: Wi-Fi Direct-->
+    <section is="wifip2p" role="region" id="wifip2p" data-require-sub-panels="true"></section>
     <!-- Connectivity :: Call :: Call Forwarding Not Reachable -->
     <section is="call-cf-notReachableSettings" role="region" id="call-cf-notReachableSettings"></section>
     <!-- Connectivity :: Call :: Call Forwarding No Reply -->
@@ -322,6 +328,10 @@
             <small id="wifi-desc" class="menu-item-desc"></small>
             <a id="menuItem-wifi" class="menu-item" href="#wifi" data-l10n-id="wifi">Wi-Fi</a>
           </li>
+          <li>
+	        <small id="wifip2p-desc" class="menu-item-desc"></small>
+	        <a id="menuItem-wifip2p" class="menu-item" href="#wifip2p" data-l10n-id="wifiDirect">Wi-Fi Direct</a>
+	      </li>
           <li id="call-settings">
             <small id="call-desc" class="menu-item-desc"></small>
             <a id="menuItem-callSettings" class="menu-item" href="#call" data-l10n-id="callSettings">Call Settings</a>
