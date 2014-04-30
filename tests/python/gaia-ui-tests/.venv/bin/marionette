@@ -1,0 +1,9 @@
+#!/home/henry/dev/b2g-n4/gaia/tests/python/gaia-ui-tests/.venv/bin/python
+# EASY-INSTALL-ENTRY-SCRIPT: 'marionette-client==0.7.6','console_scripts','marionette'
+__requires__ = 'marionette-client==0.7.6'
+import sys
+from pkg_resources import load_entry_point
+
+sys.exit(
+   load_entry_point('marionette-client==0.7.6', 'console_scripts', 'marionette')()
+)
