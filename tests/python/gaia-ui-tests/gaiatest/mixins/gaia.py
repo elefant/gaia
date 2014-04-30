@@ -93,7 +93,7 @@ class GaiaTestRunnerMixin(object):
                 print '*' * width + '\n'
                 print 'To abort the test run hit Ctrl+C on your keyboard.'
                 print 'The test run will continue in %d seconds.' % delay
-                time.sleep(delay)
+                #time.sleep(delay)
             except KeyboardInterrupt:
                 print '\nTest run aborted by user.'
                 sys.exit(1)
