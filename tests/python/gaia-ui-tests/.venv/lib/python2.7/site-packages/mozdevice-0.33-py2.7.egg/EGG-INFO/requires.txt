@@ -1,2 +1,0 @@
-mozfile >= 1.0
-mozlog

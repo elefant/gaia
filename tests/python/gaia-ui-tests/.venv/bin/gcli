@@ -1,9 +1,0 @@
-#!/home/henry/dev/b2g-n4/gaia/tests/python/gaia-ui-tests/.venv/bin/python
-# EASY-INSTALL-ENTRY-SCRIPT: 'gaiatest==0.22','console_scripts','gcli'
-__requires__ = 'gaiatest==0.22'
-import sys
-from pkg_resources import load_entry_point
-
-sys.exit(
-   load_entry_point('gaiatest==0.22', 'console_scripts', 'gcli')()
-)

@@ -1,9 +1,0 @@
-#!/home/henry/dev/b2g-n4/gaia/tests/python/gaia-ui-tests/.venv/bin/python
-# EASY-INSTALL-ENTRY-SCRIPT: 'mozprofile==0.21','console_scripts','diff-profiles'
-__requires__ = 'mozprofile==0.21'
-import sys
-from pkg_resources import load_entry_point
-
-sys.exit(
-   load_entry_point('mozprofile==0.21', 'console_scripts', 'diff-profiles')()
-)
