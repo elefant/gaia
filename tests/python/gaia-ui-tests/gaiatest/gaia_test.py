@@ -948,12 +948,12 @@ class GaiaTestCase(MarionetteTestCase, B2GTestCaseMixin):
 
             self.data_layer.disable_cell_roaming()
 
-            if self.device.has_wifi:
+            #if self.device.has_wifi:
                 # Bug 908553 - B2G Emulator: support wifi emulation
-                if not self.device.is_emulator:
-                    self.data_layer.enable_wifi()
-                    self.data_layer.forget_all_networks()
-                    self.data_layer.disable_wifi()
+                #if not self.device.is_emulator:
+                    #self.data_layer.enable_wifi()
+                    #self.data_layer.forget_all_networks()
+                    #self.data_layer.disable_wifi()
 
             # remove data
             self.data_layer.remove_all_contacts()
