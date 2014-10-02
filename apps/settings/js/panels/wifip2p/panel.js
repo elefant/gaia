@@ -11,7 +11,7 @@ define(function(require) {
   var gWifiP2pPeerList;
 
   var gWpsMethod = "pbc";
-  var gGoIntent = 1;
+  var gGoIntent = 15;
   var DEVICE_NAME = "I am Mozillian!";
 
   if (!gWifiP2pManager) {
@@ -123,6 +123,8 @@ define(function(require) {
         debug("Current Group owner: macAddress: " + gWifiP2pManager.groupOwner.macAddress +
               ", ipAddress: " + gWifiP2pManager.groupOwner.ipAddress +
               ", isLocal: " + gWifiP2pManager.groupOwner.isLocal);
+
+        gWifiP2pManager.listenForRemoteDisplay();
       }
 
       debug('The peer whose status has just changed is: ' + event.peerAddress);
