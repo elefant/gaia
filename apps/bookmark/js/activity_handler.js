@@ -1,5 +1,7 @@
 'use strict';
 
+var gPrerenderManager = PrerenderManager(window);
+
 /* global utils, BookmarkEditor, BookmarkRemover */
 var ActivityHandler = {
   'save-bookmark': function ah_save(activity) {
@@ -10,10 +12,13 @@ var ActivityHandler = {
           window.removeEventListener('status-hidden', hidden);
           activity.postResult(saved ? 'saved' : 'updated');
         });
-        
-        utils.status.show(
-          navigator.mozL10n.get(saved ? 'added-to-home-screen-message' :
-                                        'updated-bookmark'));
+
+        gPrerenderManager.doPrerender(this.data.url, function() {
+          utils.status.show(
+            navigator.mozL10n.get(saved ? 'added-to-home-screen-message' :
+                                          'updated-bookmark'));
+        });
+
       },
       oncancelled: function oncancelled() {
         activity.postError('cancelled');
@@ -51,3 +56,43 @@ navigator.mozSetMessageHandler('activity', function onActivity(activity) {
       activity.postError('name not supported');
   }
 });
+
+/*
+function debug(s) {
+  console.log('Bookmark: ' + s);
+}
+
+var gPrerederFrame = null;
+
+function doPrerender(href, callback) {
+  debug('doPrerender: ' + href);
+
+  if (!gPrerederFrame) {
+    debug('createPrerenderFrame');
+    gPrerederFrame = createPrerenderFrame(window.document);
+  }
+
+  gPrerederFrame.src = href;
+  gPrerederFrame.addEventListener('mozbrowserloadend', function() {
+    debug('href: ' + href + ' has been prerendered.');
+    callback();
+  });
+
+  gPrerederFrame.addEventListener('mozbrowserlocationchange', function() {
+    debug('href: ' + href + ' location change.');
+    callback();
+  });
+}
+
+function createPrerenderFrame(d) {
+  var iframe = d.createElement('iframe');
+  iframe.setAttribute('mozbrowser', 'true');
+  iframe.style.visibility = 'hidden';
+  iframe.style.position   = 'absolute';
+
+  // append iframe to DOM
+  d.body.insertBefore(iframe, d.body.firstChild);
+
+  return iframe;
+}
+*/

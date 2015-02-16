@@ -9,7 +9,8 @@
   },
   "permissions": {
     "themeable":{},
-    "systemXHR":{}
+    "systemXHR":{},
+    "browser":{}
   },
   "activities": {
     "save-bookmark": {

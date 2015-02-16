@@ -1,0 +1,16 @@
+{
+  "name": "Bookmarks Sync",
+  "type": "privileged",
+  "description": "Bookmarks Sync",
+  "launch_path": "/index.html",
+  "developer": {
+    "name": "Henry Chang",
+    "url": "http://mozilla.org"
+  },
+  "permissions": {
+    "alarms": {}
+  },
+  "messages": [{
+    "alarm": "/index.html"
+  }]
+}
